@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="printACard" pageWidth="216" pageHeight="144" orientation="Landscape" columnWidth="176" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1ac29316-7452-4258-b561-043a2981ea8d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="-3" y="-5" width="122" height="22" forecolor="#421918" uuid="86c4f38c-0a47-4479-851c-b9b1f4982314"/>
+				<textElement>
+					<font fontName="Algerian" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Readers Hub]]></text>
+			</staticText>
+			<line>
+				<reportElement x="9" y="15" width="86" height="1" uuid="ee1dc7c4-56c5-491f-9d7b-5c267bd99e4a"/>
+			</line>
+			<image>
+				<reportElement x="120" y="-20" width="57" height="50" uuid="e6f73d36-caf0-465d-a99a-6faf69e161cc"/>
+				<imageExpression><![CDATA["E:/course work/Library management system/Library Management System/src/asserts/book.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="-1" y="1" width="30" height="20" uuid="09873778-cf0a-4861-8b5b-be4b68e0f389"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="15" width="30" height="20" uuid="16e775b7-23b7-4f9e-9443-6970314b6cda"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="29" width="50" height="20" uuid="1cb1678d-7dd5-45dd-961a-d312c2227627"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Issued Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="0" width="6" height="20" uuid="c0054fc2-b135-454a-b4de-e67dfcb3cc39"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="15" width="6" height="20" uuid="6f4669d2-f6d5-4a9c-8f0c-034c02584965"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="30" width="6" height="20" uuid="bb7602c5-7f7f-4be0-b7d5-38f6e3cbafdf"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="59" y="0" width="90" height="14" uuid="275a3e0f-10d7-440a-891d-d0866bc2cf03"/>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="14" width="130" height="14" uuid="a88ee78a-8435-460a-ba66-6f0fab6089d1"/>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="-1" y="50" width="178" height="10" forecolor="#1E2159" uuid="9f71cf43-d0c8-42ff-8f30-9de934b801a6"/>
+				<textElement textAlignment="Right">
+					<font size="7" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Readers Hub Public Library, Galle Rd, Panadura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-1" y="60" width="178" height="10" forecolor="#595D7D" uuid="8e7ffcef-dcc8-4248-a944-5463e97aca5b"/>
+				<textElement textAlignment="Right">
+					<font size="7" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[031-9283741 / 077-9284928]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="57" y="28" width="100" height="20" uuid="f332f364-5f7e-472f-936d-e54ff8edbd47"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>

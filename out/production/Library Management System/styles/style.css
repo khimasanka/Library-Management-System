@@ -1,0 +1,70 @@
+.backgroundColor{
+    -fx-background-color: linear-gradient(to right bottom, #abd2b5, #2edbab);
+    -fx-background-radius: 300;
+}
+.ash-Background{
+    -fx-background-color:linear-gradient(to right bottom, #827d7d, #d5d4d4);
+}
+
+.admin-login{
+    -fx-background-color:  #f1c40f;
+    -fx-background-radius: 15;
+
+}
+.admin-login:hover{
+    -fx-cursor: hand;
+    -fx-background-color:  #2ecc71;
+}
+.admin-login:pressed{
+    -fx-cursor: hand;
+    -fx-background-color:  #C2D32F;
+}
+
+.login-to{
+    -fx-background-color: #4c8bea;
+
+}
+.login-to:hover{
+    -fx-background-color: #0f8600;
+}
+
+.textPane{
+    -fx-background-color: white;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-radius: 8px;
+    -fx-border-width: 2;
+    -fx-background-radius: 8px;
+}
+.textField{
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #726d6d;
+}
+
+.DashBoardButtons:hover {
+    animation: changeBG 2s ease-in-out infinite;
+}
+
+.textLabel{
+    -fx-background-color: white;
+    -fx-padding: 0 5px 0px 5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(76, 73, 73, 0.83);;
+    -fx-background-radius: 10;
+}
+
+.background-settings{
+    -fx-background-color:  #c2e59c;
+    -fx-background-color: linear-gradient(to right, #64b3f4, #c2e59c);
+}
+
+.background-2 {
+    -fx-background-color: #AAFFA9;
+    -fx-background-color:linear-gradient(to right, #d5e8e1, #c5efe9);
+    -fx-background-radius: 20;
+}
+
+
+
+
+
+

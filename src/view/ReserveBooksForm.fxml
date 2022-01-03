@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="748.0" prefWidth="1034.0" styleClass="blue-background" stylesheets="@../styles/dashboardStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReserveBooksFormController">
+   <children>
+      <TextField fx:id="txtBookIdToReserve" alignment="CENTER" editable="false" layoutX="403.0" layoutY="39.0" onKeyReleased="#reserveFieldFocus" prefHeight="33.0" prefWidth="203.0" promptText="BOOK ID" styleClass="text-fields" stylesheets="@../styles/dashboardStyles.css" text="B-" AnchorPane.leftAnchor="403.0" />
+      <Text layoutX="21.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borrow Id :" AnchorPane.leftAnchor="21.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblReserve" layoutX="12.0" layoutY="211.0" prefHeight="473.0" prefWidth="1011.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="211.0">
+         <columns>
+            <TableColumn fx:id="colBorrowId" prefWidth="112.0" text="BORROW ID" />
+            <TableColumn fx:id="colMemberId" prefWidth="124.0" text="MEMBER ID" />
+            <TableColumn fx:id="colMemberName" prefWidth="363.0" text="MEMBER NAME" />
+            <TableColumn fx:id="colBookId" prefWidth="132.0" text="BOOK ID" />
+            <TableColumn fx:id="colBorrowDate" prefWidth="136.0" text="BORROW DATE" />
+            <TableColumn fx:id="colReserveDate" prefWidth="143.0" text="RESERVE DATE" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="btnReserve" buttonType="RAISED" layoutX="820.0" layoutY="143.0" onAction="#reserveBook" prefHeight="41.0" prefWidth="134.0" styleClass="save-edit-button" stylesheets="@../styles/dashboardStyles.css" text="RESERVE" textFill="WHITE" AnchorPane.rightAnchor="79.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtBookNameToReserve" alignment="CENTER" editable="false" layoutX="634.0" layoutY="38.0" onKeyReleased="#reserveFieldFocus" prefHeight="33.0" prefWidth="365.0" promptText="BOOK NAME" styleClass="text-fields" stylesheets="@../styles/dashboardStyles.css" AnchorPane.leftAnchor="634.0" AnchorPane.rightAnchor="35.0" />
+      <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="878.0" layoutY="693.0" onAction="#removeTableField" prefHeight="41.0" prefWidth="134.0" styleClass="delete-button" stylesheets="@../styles/dashboardStyles.css" text="REMOVE" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="22.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtMemberIDToReserve" alignment="CENTER" editable="false" layoutX="208.0" layoutY="98.0" onAction="#searchMemberToBorrow" onKeyReleased="#reserveFieldFocus" prefHeight="33.0" prefWidth="203.0" promptText="MEMBER ID" styleClass="text-fields" stylesheets="@../styles/dashboardStyles.css" text="M-" />
+      <TextField fx:id="txtMemberName" alignment="CENTER" editable="false" layoutX="466.0" layoutY="98.0" onKeyReleased="#reserveFieldFocus" prefHeight="33.0" prefWidth="388.0" promptText="MEMBER NAME" styleClass="text-fields" stylesheets="@../styles/dashboardStyles.css" AnchorPane.leftAnchor="466.0" AnchorPane.rightAnchor="180.0" />
+      <Label layoutX="414.0" layoutY="28.0" styleClass="textLabel" stylesheets="@../styles/style.css" text="BOOK ID" />
+      <Label layoutX="219.0" layoutY="85.0" styleClass="textLabel" stylesheets="@../styles/style.css" text="MEMBER ID" />
+      <Label layoutX="652.0" layoutY="26.0" styleClass="textLabel" stylesheets="@../styles/style.css" text="BOOK  NAME" />
+      <Label layoutX="483.0" layoutY="84.0" styleClass="textLabel" stylesheets="@../styles/style.css" text="MEMBER NAME" />
+      <TextField fx:id="txtBorrowIdToReserve" alignment="CENTER" layoutX="174.0" layoutY="41.0" onAction="#searchBorrowToReserve" onKeyReleased="#reserveFieldFocus" prefHeight="33.0" prefWidth="203.0" promptText="BOOK ID" styleClass="text-fields" stylesheets="@../styles/dashboardStyles.css" text="BN-" AnchorPane.leftAnchor="174.0" />
+      <Label layoutX="190.0" layoutY="28.0" styleClass="textLabel" stylesheets="@../styles/style.css" text="BORROW ID" />
+      <Label fx:id="lblDate" layoutX="903.0" layoutY="104.0" opacity="0.0" />
+   </children>
+</AnchorPane>

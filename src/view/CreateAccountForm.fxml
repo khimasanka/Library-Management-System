@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="signUpContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="512.0" style="-fx-background-color: E9E9E9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateAccountFormController">
+   <children>
+      <Pane layoutX="-12.0" layoutY="-469.0" prefHeight="618.0" prefWidth="537.0" rotate="90.0" styleClass="backgroundColor" stylesheets="@../styles/style.css">
+         <children>
+            <Text fill="#fcfcfc" fontSmoothingType="LCD" layoutX="402.0" layoutY="321.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+               <font>
+                  <Font name="Bauhaus 93" size="46.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Circle fill="WHITE" layoutX="267.0" layoutY="120.0" radius="41.0" stroke="BLACK" strokeType="INSIDE" />
+      <FontAwesomeIconView fill="#16a82e" glyphName="USER" layoutX="235.0" layoutY="145.0" size="80" style="-fx-fill: green;" text="" wrappingWidth="84.0" />
+      <Label layoutX="31.0" layoutY="206.0" text="Full name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="275.0" text="Mobile">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Text layoutX="43.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Label layoutX="5.0" layoutY="411.0" text="User Name" textFill="#252020">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="481.0" text="Password" textFill="#252020">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="USER" layoutX="97.0" layoutY="430.0" size="19" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="95.0" layoutY="501.0" size="19" />
+      <JFXButton fx:id="btnCreateAccount" buttonType="RAISED" layoutX="162.0" layoutY="619.0" onAction="#accountCreateOnAction" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Create Account" textFill="WHITE" AnchorPane.leftAnchor="162.0" AnchorPane.rightAnchor="140.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="45.0" fitWidth="43.0" layoutX="21.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-back-48.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="22.0" layoutY="99.0" onAction="#backToOnAction" opacity="0.0" prefHeight="31.0" prefWidth="34.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="121.0" layoutY="190.0" prefHeight="42.0" prefWidth="369.0" styleClass="textPane" stylesheets="@../styles/style.css" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="17.0">
+         <children>
+            <TextField fx:id="txtName" layoutX="13.0" layoutY="8.0" onKeyReleased="#validateFieldOnPress" prefHeight="31.0" prefWidth="359.0" promptText="Nimal Perera" styleClass="textField" stylesheets="@../styles/style.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="121.0" layoutY="262.0" prefHeight="42.0" prefWidth="369.0" styleClass="textPane" stylesheets="@../styles/style.css" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="22.0">
+         <children>
+            <TextField fx:id="txtMobile" layoutX="8.0" layoutY="6.0" onKeyReleased="#validateFieldOnPress" prefHeight="31.0" prefWidth="359.0" promptText="077-1234567" styleClass="textField" stylesheets="@../styles/style.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="120.0" layoutY="334.0" prefHeight="42.0" prefWidth="369.0" styleClass="textPane" stylesheets="@../styles/style.css" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="22.0">
+         <children>
+            <TextField fx:id="txtAddress" layoutX="13.0" layoutY="8.0" onKeyReleased="#validateFieldOnPress" prefHeight="31.0" prefWidth="344.0" promptText="Colombo 7" styleClass="textField" stylesheets="@../styles/style.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="120.0" layoutY="404.0" prefHeight="42.0" prefWidth="369.0" styleClass="textPane" stylesheets="@../styles/style.css" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="22.0">
+         <children>
+            <TextField fx:id="txtUserName" layoutX="13.0" layoutY="8.0" onKeyReleased="#validateFieldOnPress" prefHeight="31.0" prefWidth="344.0" promptText="User Name" styleClass="textField" stylesheets="@../styles/style.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="120.0" layoutY="474.0" prefHeight="42.0" prefWidth="369.0" styleClass="textPane" stylesheets="@../styles/style.css" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="22.0">
+         <children>
+            <TextField fx:id="txtPasswordView" layoutX="14.0" layoutY="6.0" prefHeight="31.0" prefWidth="314.0" promptText="Password" styleClass="textField" stylesheets="@../styles/style.css" />
+            <PasswordField fx:id="txtPassword" layoutX="14.0" layoutY="6.0" onKeyReleased="#validateFieldOnPress" prefHeight="31.0" prefWidth="320.0" promptText="Password" styleClass="textField" stylesheets="@../styles/style.css" />
+            <CheckBox fx:id="chkBox" layoutX="341.0" layoutY="11.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="1.0" AnchorPane.rightAnchor="0.0">
+               <opaqueInsets>
+                  <Insets top="5.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbRole" layoutX="119.0" layoutY="542.0" prefHeight="38.0" prefWidth="369.0" promptText="      Choose Role" styleClass="textField" stylesheets="@../styles/style.css" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="24.0" />
+      <Label layoutX="51.0" layoutY="548.0" text="Role">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

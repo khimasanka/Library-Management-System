@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <center>
+      <AnchorPane fx:id="mainLoginContext" prefHeight="672.0" prefWidth="1134.0" style="-fx-background-color: white;" stylesheets="@../styles/style.css">
+         <children>
+            <ImageView fitHeight="267.0" fitWidth="367.0" layoutX="101.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/LetsMoveIcon.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="368.0" layoutY="210.0" prefHeight="125.0" prefWidth="245.0" text="Library">
+               <font>
+                  <Font name="Bauhaus 93" size="80.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="190.0" fitWidth="275.0" layoutX="294.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" styleClass="backgroundColor">
+               <image>
+                  <Image url="@../asserts/unnamed.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="222.0" layoutY="312.0" text="Management System" textFill="#003cff">
+               <font>
+                  <Font name="Bauhaus 93" size="53.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="432.0" layoutY="553.0" onAction="#adminLoginFormOnAction" prefHeight="30.0" prefWidth="161.0" style="-fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;" styleClass="admin-login" stylesheets="@../styles/style.css" text="Admin Login">
+               <font>
+                  <Font name="Bodoni MT" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="180.0" layoutY="553.0" onAction="#userLoginFormOnAction" prefHeight="31.0" prefWidth="161.0" style="-fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;" styleClass="admin-login" text="User Login">
+               <font>
+                  <Font name="Bodoni MT" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <AnchorPane fx:id="secondContext" layoutX="742.0" layoutY="-2.0" prefHeight="674.0" prefWidth="392.0" style="-fx-background-color: E6E6E6;" styleClass="ash-Background" stylesheets="@../styles/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="742.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+               <children>
+                  <JFXTextField fx:id="txtUserName" alignment="CENTER" labelFloat="true" layoutX="31.0" layoutY="331.0" onKeyReleased="#focusToPassword" prefHeight="39.0" prefWidth="293.0" promptText="User Name" style="-fx-background-color: white;" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="29.0">
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="passwordView" alignment="CENTER" labelFloat="true" layoutX="31.0" layoutY="404.0" prefHeight="39.0" prefWidth="293.0" promptText="Password" style="-fx-background-color: white;" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="29.0" />
+                  <JFXPasswordField fx:id="txtPassword" alignment="CENTER" labelFloat="true" layoutX="31.0" layoutY="404.0" prefHeight="39.0" prefWidth="293.0" promptText="Password" style="-fx-background-color: white;" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="29.0" />
+                  <AnchorPane layoutX="1.0" layoutY="63.0" prefHeight="145.0" prefWidth="304.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <StackPane layoutX="77.0" layoutY="7.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="76.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/user.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="89.0" layoutY="480.0" onAction="#loginOnAction" prefHeight="39.0" prefWidth="176.0" style="-fx-background-color: #3399FF; -fx-background-radius: 20;" styleClass="login-to" stylesheets="@../styles/style.css" text="Login" textFill="#ffe9e9" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="88.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="99.0" layoutY="550.0" onAction="#createAccountOnAction" stylesheets="@../styles/style.css" text="Create New Account" textFill="#087500" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="98.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <StackPane layoutX="73.0" layoutY="233.0" prefHeight="62.0" prefWidth="210.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="70.0">
+                     <children>
+                        <Label fx:id="lblLog" text="User">
+                           <font>
+                              <Font name="Century Schoolbook Bold" size="32.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.5679611650485437" endY="1.0" startY="0.6067961165048543">
+                                 <stops>
+                                    <Stop color="#8a0000" />
+                                    <Stop color="#110303" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <Label fx:id="lblErrorMsg" alignment="CENTER" layoutX="53.0" layoutY="452.0" prefHeight="21.0" prefWidth="293.0" textFill="#f20000" />
+                  <CheckBox fx:id="chkBox" layoutX="296.0" layoutY="413.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="0.0" AnchorPane.rightAnchor="29.0" />
+               </children>
+            </AnchorPane>
+            <Separator layoutX="739.0" orientation="VERTICAL" prefHeight="665.0" prefWidth="4.0" />
+            <CheckBox layoutX="-93.0" layoutY="-29.0" mnemonicParsing="false" text="CheckBox" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
